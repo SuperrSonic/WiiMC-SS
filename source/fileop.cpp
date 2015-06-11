@@ -15,9 +15,7 @@
 #include <dirent.h>
 #include <sys/stat.h>
 #include <errno.h>
-#include <ntfs.h>
 #include <fat.h>
-#include <ext2.h>
 #include <di/di.h>
 #include <iso9660.h>
 #include <sdcard/wiisd_io.h>
@@ -464,22 +462,11 @@ static void AddPartition(sec_t sector, int device, int type, int *devnum)
 				return;
 			fatGetVolumeLabel(mount, part[device][*devnum].name);
 			break;
-		case T_NTFS:
-			if(!ntfsMount(mount, disc, sector, 2, 64, NTFS_DEFAULT | NTFS_RECOVER))
-				return;
-
-			name = (char *)ntfsGetVolumeName(mount);
-
 			if(name && name[0])
 				strcpy(part[device][*devnum].name, name);
 			else
 				part[device][*devnum].name[0] = 0;
 			break;
-		case T_EXT2:
-			if(!ext2Mount(mount, disc, sector, 2, 128, EXT2_FLAG_DEFAULT))
-				return;
-
-			name = (char *)ext2GetVolumeName(mount);
 
 			if(name && name[0])
 				strcpy(part[device][*devnum].name, name);
@@ -780,14 +767,6 @@ static void UnmountPartitions(int device)
 				part[device][i].type = 0;
 				sprintf(mount, "%s:", part[device][i].mount);
 				fatUnmount(mount);
-				break;
-			case T_NTFS:
-				part[device][i].type = 0;
-				ntfsUnmount(part[device][i].mount, false);
-				break;
-			case T_EXT2:
-				part[device][i].type = 0;
-				ext2Unmount(part[device][i].mount);
 				break;
 			case T_ISO9660:
 				part[device][i].type = 0;

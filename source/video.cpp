@@ -255,7 +255,7 @@ InitVideo ()
 	if (CONF_GetAspectRatio() == CONF_ASPECT_16_9)
 	{
 		screenwidth = 768;
-		vmode->viWidth = 720;
+		vmode->viWidth = 704;
         vmode->fbWidth = 640;
         vmode->efbHeight = 480;
         vmode->xfbHeight = 480;
@@ -263,7 +263,7 @@ InitVideo ()
 	}
 	else
 	{
-		vmode->viWidth = 720;
+		vmode->viWidth = 704;
         vmode->fbWidth = 640;
         vmode->efbHeight = 480;
         vmode->xfbHeight = 480;
