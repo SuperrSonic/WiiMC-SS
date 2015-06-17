@@ -1725,21 +1725,21 @@ static void CreditsWindow()
 	txt[i]->SetAlignment(ALIGN_RIGHT, ALIGN_TOP);
 	txt[i]->SetPosition((screenwidth/2)-45,56); i++;
 
-	txt[i] = new GuiText("www.wiimc.org", 16, (GXColor){255, 255, 255, 255});
+	txt[i] = new GuiText(" ", 16, (GXColor){255, 255, 255, 255});
 	txt[i]->SetAlignment(ALIGN_CENTRE, ALIGN_TOP);
 	txt[i]->SetPosition(0,y); i++; y+=44;
 
-	txt[i] = new GuiText("Coding & menu design", 20, (GXColor){160, 160, 160, 255});
+	txt[i] = new GuiText("Programming & menu design", 20, (GXColor){160, 160, 160, 255});
 	txt[i]->SetAlignment(ALIGN_RIGHT, ALIGN_TOP);
 	txt[i]->SetPosition(-15,y); i++;
-	txt[i] = new GuiText("Tantric", 20, (GXColor){255, 255, 255, 255});
+	txt[i] = new GuiText("Diego", 20, (GXColor){255, 255, 255, 255});
 	txt[i]->SetAlignment(ALIGN_LEFT, ALIGN_TOP);
 	txt[i]->SetPosition(15,y); i++; y+=26;
 
-	txt[i] = new GuiText("Coding", 20, (GXColor){160, 160, 160, 255});
+	txt[i] = new GuiText("Programming", 20, (GXColor){160, 160, 160, 255});
 	txt[i]->SetAlignment(ALIGN_RIGHT, ALIGN_TOP);
 	txt[i]->SetPosition(-15,y); i++;
-	txt[i] = new GuiText("rodries", 20, (GXColor){255, 255, 255, 255});
+	txt[i] = new GuiText("Tantric & rodries", 20, (GXColor){255, 255, 255, 255});
 	txt[i]->SetAlignment(ALIGN_LEFT, ALIGN_TOP);
 	txt[i]->SetPosition(15,y); i++; y+=26;
 	
@@ -1761,15 +1761,15 @@ static void CreditsWindow()
 	txt[i]->SetAlignment(ALIGN_CENTRE, ALIGN_TOP);
 	txt[i]->SetPosition(0,y); i++; y+=36;
 
-	txt[i] = new GuiText("MPlayer Team", 16, (GXColor){255, 255, 255, 255});
+	txt[i] = new GuiText("Yuji Naka", 16, (GXColor){255, 255, 255, 255});
 	txt[i]->SetAlignment(ALIGN_CENTRE, ALIGN_TOP);
 	txt[i]->SetPosition(0,y); i++; y+=20;
 
-	txt[i] = new GuiText("shagkur & wintermute (libogc / devkitPPC)", 16, (GXColor){255, 255, 255, 255});
+	txt[i] = new GuiText("Kazuma Kamachi", 16, (GXColor){255, 255, 255, 255});
 	txt[i]->SetAlignment(ALIGN_CENTRE, ALIGN_TOP);
 	txt[i]->SetPosition(0,y); i++; y+=44;
 
-	txt[i] = new GuiText("This software is open source and may be copied, distributed, or modified under the terms of the GNU General Public License (GPL) Version 2.", 14, (GXColor){160, 160, 160, 255});
+	txt[i] = new GuiText("This is a private build of WiiMC.", 14, (GXColor){160, 160, 160, 255});
 	txt[i]->SetAlignment(ALIGN_CENTRE, ALIGN_TOP);
 	txt[i]->SetPosition(0,y);
 	txt[i]->SetWrap(true, 500);
