@@ -462,17 +462,6 @@ static void AddPartition(sec_t sector, int device, int type, int *devnum)
 				return;
 			fatGetVolumeLabel(mount, part[device][*devnum].name);
 			break;
-			if(name && name[0])
-				strcpy(part[device][*devnum].name, name);
-			else
-				part[device][*devnum].name[0] = 0;
-			break;
-
-			if(name && name[0])
-				strcpy(part[device][*devnum].name, name);
-			else
-				part[device][*devnum].name[0] = 0;
-			break;
 		case T_ISO9660:
 		    if (device == DEVICE_USB)
 		    {
