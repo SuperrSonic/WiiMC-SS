@@ -3,7 +3,5 @@
 - Deflicker filtering has been disabled for best quality.
 - Removed NTFS and EXT libs to increase memory.
 - Attractive pointer.
+- Removed grabbing textures.
 
-
-# Planned features:
-- GameCube controller support.

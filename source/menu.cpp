@@ -6661,10 +6661,10 @@ static void SetupGui()
 	pointerImg[1] = player2_point_png;
 	pointerImg[2] = player3_point_png;
 	pointerImg[3] = player4_point_png;
-	pointerGrabImg[0] = player1_grab_png;
-	pointerGrabImg[1] = player2_grab_png;
-	pointerGrabImg[2] = player3_grab_png;
-	pointerGrabImg[3] = player4_grab_png;
+	pointerGrabImg[0] = grab_png;
+	pointerGrabImg[1] = grab_png;
+	pointerGrabImg[2] = grab_png;
+	pointerGrabImg[3] = grab_png;
 	pointer[0] = new GuiImageData(pointerImg[0]);
 	pointer[1] = new GuiImageData(pointerImg[1]);
 	pointer[2] = new GuiImageData(pointerImg[2]);
