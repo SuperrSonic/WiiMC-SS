@@ -1,7 +1,4 @@
-# WiiMC-SS features:
+# WiiMC-SS changes:
 - Displays square pixels.
-- Deflicker filtering has been disabled for best quality.
+- 480i doesn't use deflicker.
 - Removed NTFS and EXT libs to increase memory.
-- Attractive pointer.
-- Removed grabbing textures.
-
